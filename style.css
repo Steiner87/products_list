@@ -5,6 +5,34 @@ section {}
     color: #878787;
 }
 
+ul {
+    padding-top: 8px;
+    /* padding-bottom: 5px; */
+    border-top: 2px dotted #d8d8d8;
+    font-size: 13px;
+}
+
+li:nth-child(2).new:not(:last-child) {
+    border-left: 2px solid #d8d8d8;
+    border-right: 2px solid #d8d8d8;
+}
+
+li:last-child.new:not(:first-child) {
+    border-left: 2px solid #d8d8d8;
+}
+
+.new {}
+
+.description {
+    font-size: 14px;
+    max-width: 55%;
+}
+
+.amazon {
+    float: right;
+    font-size: 14px;
+}
+
 img[height="95"] {
     position: absolute;
     top: 20px;
@@ -15,42 +43,6 @@ img[height="118"] {
     position: absolute;
     top: 15px;
     right: 32px;
-}
-
-table .type-one {}
-
-table .type-two {}
-
-table.type-three tfoot td {
-    width: 50%;
-}
-
-table.type-four td {
-    padding-right: 0;
-}
-
-table.type-one td {
-    position: relative;
-}
-
-table.type-three td {
-    position: relative;
-}
-
-table.type-one tbody td:not(:last-child):after,
-table.type-one tfoot td:not(:last-child):after,
-table.type-three tbody td:not(:last-child):after,
-table.type-three tfoot td:not(:last-child):after {
-    content: "";
-    position: absolute;
-    height: 14px;
-    top: 8px;
-    right: 0;
-    border-right: 2px solid #e6e6e6;
-}
-
-.card table {
-    margin-top: auto;
 }
 
 .goods {
@@ -65,6 +57,7 @@ a {
     text-decoration: none;
     margin: 13px 15px;
     height: 100%;
+    /* width: 384px; */
 }
 
 a:hover .card {
@@ -77,14 +70,43 @@ a:hover .card {
     padding-top: 0;
     box-sizing: border-box;
     position: relative;
-    width: 384px;
+    /* width: 384px; */
     height: 100%;
+}
+
+.card ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.card ul li {
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+}
+
+.card ul li:first-child {
+    flex: 1 1 132px;
+    text-align: center;
+}
+
+.card ul li:last-child {
+    flex: 1 1 88px;
+    text-align: center;
+}
+
+.card ul li:nth-child(2) {
+    flex: 1 1 128px;
+    text-align: center;
 }
 
 .wrapper {
     display: flex;
     flex-direction: row;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 
 .description {
@@ -96,7 +118,7 @@ a:hover .card {
 }
 
 .card-red img {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .card-red {
@@ -109,10 +131,6 @@ a:hover .card {
 
 .card-yellow {
     outline-color: #ffbe17;
-}
-
-.description {
-    flex: 1 0 186px;
 }
 
 .card-orange img {
@@ -155,30 +173,15 @@ a:hover .card {
 }
 
 .top-deal img {
+    display: block;
+    margin: 0 auto;
     padding-top: 18px;
-    margin-left: 92px;
-    margin-right: 80px;
+    margin-bottom: 55px;
 }
 
 .top-deal {
     /* width: 250px; */
-    height: 445px;
-}
-
-table {
-    width: 100%;
-}
-
-table thead {
-    font-size: 14px;
-}
-
-table tfoot {
-    font-size: 13px;
-}
-
-table tfoot td {
-    height: 28px;
+    /* height: 446px; */
 }
 
 .new-price {
@@ -196,43 +199,6 @@ table tfoot td {
 
 .price-red {
     color: #ff6666;
-}
-
-.amazon {
-    text-align: right;
-}
-
-thead td {
-    border-bottom: 2px dotted #e6e6e6;
-    /* border-right: 2px dotted #e6e6e6; */
-}
-
-tbody td {
-    border-bottom: 2px dotted #e6e6e6;
-}
-
-thead td {
-    min-height: 130px;
-}
-
-thead td img {
-    padding-bottom: 15px;
-}
-
-.top-deal thead td:first-child {}
-
-thead td:nth-child(2) {
-    font-size: 13px;
-    vertical-align: bottom;
-}
-
-tfoot td:first-child {
-    text-align: center;
-}
-
-tfoot td:nth-child(2) {
-    text-align: center;
-    width: 125px;
 }
 
 .old-price {
@@ -267,23 +233,41 @@ tfoot td:nth-child(2) {
 }
 
 .timer {
-    padding-left: 29px;
+    /* padding-left: 29px; */
 }
 
-@media (min-width:430px) {
-    .goods {
-        width: 415px;
+@media screen and (max-width:767px) {
+    .goods {}
+    a {
+        width: 95%;
     }
 }
 
-@media (min-width:861px) and (max-width:1250px) {
-    .goods {
-        width: 830px;
+@media screen and (min-width:768px) {
+    .goods {}
+    a {
+        width: 45%;
     }
 }
 
-@media (min-width:1251px) {
-    .goods {
-        width: 1250px;
+@media screen and (min-width:992px) {
+    .goods {}
+    a {
+        width: 30%;
     }
 }
+
+@media screen and (min-width:1200px) {
+    .goods {
+        margin: 0 auto;
+    }
+    a {
+        width: 30%;
+    }
+}
+
+
+/* Large> 1200px (3) *
+Middle> 992px (3)
+Small> 768px (2)
+Extra small <767px (1) */
