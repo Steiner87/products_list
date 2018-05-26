@@ -1,6 +1,9 @@
 section {}
 
-* {
+ul,
+.description,
+.old-price,
+.amazon {
     font-family: 'Roboto', sans-serif;
     color: #878787;
 }
